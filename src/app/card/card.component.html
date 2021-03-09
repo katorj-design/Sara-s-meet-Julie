@@ -1,0 +1,147 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col">
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Menú</h1>
+        <p class="lead">Vive el ritual del café con nuestras experiencias únicas.</p>
+      </div>
+      <div class="container">
+        <div class="row-cols-sm-8">
+          <mat-tab-group animationDuration="0ms" mat-align-tabs="center">
+            <mat-tab label="Bebidas calientes">
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card">
+                    <img src="../../assets/img/capuccino.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><strong>Cappuccino </strong><i>{{mensaje}}</i></h3>
+                      <h2 class="card-title pricing-card-title" [style.color]="color">$5.500 <small class="text-muted">/-15%</small></h2>
+                      <p class="card-text">Una de las bebidas más tradicionales con las perfectas notas de aroma y sabor en tu paladar.
+                        <ins>Tamaños: </ins></p>
+                      <ul class="list-group-item" *ngFor="let size of sizes">{{size.name}}</ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col" [hidden]="escondido">
+                  <div class="card">
+                    <img src="../../assets/img/white.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><strong>Café tradición</strong></h3>
+                      <h2 class="card-title pricing-card-title">$5.600</h2>
+                      <p class="card-text">Tu café con notas de sabor a panela, clavos, canela y leche.
+                      <ul class="list-group-item" *ngFor="let size of sizes">Tamaños: {{size.name}}</ul> Pequeño, mediano y grande
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="../../assets/img/expresso.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><strong>Espresso</strong></h3>
+                      <h2 class="card-title pricing-card-title">$5.500</h2>
+                      <p class="card-text">Extracto de café muy aromático y concentrado cubierto por una crema dorada.
+                        <br><ins>Tamaños: </ins></p>
+                      <ul class="list-group-item" *ngFor="let size of sizes1">{{size.name}}</ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="../../assets/img/latte.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><strong>Latte</strong></h3>
+                      <h2 class="card-title pricing-card-title">$6.500</h2>
+                      <p class="card-text">Una Combinación de nuestro mejor espresso y leche, cubierto de una capa cremosa de leche.
+                        <ins>Tamaños: </ins></p>
+                      <ul class="list-group-item" *ngFor="let size of sizes">{{size.name}}</ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab label="Bebidas frías">
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card">
+                    <img src="../../assets/img/affogato.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><strong>Affogato</strong></h3>
+                      <h2 class="card-title pricing-card-title">$8.000</h2>
+                      <p class="card-text"> Una nueva forma de tomarte un espress con helado de vainilla gourmet.
+                        <br><ins>Tamaños: </ins></p>
+                      <ul class="list-group-item" *ngFor="let size of sizes2">{{size.name}}</ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="../../assets/img/expresso-frio.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><strong>Expressso frio</strong></h3>
+                      <h2 class="card-title pricing-card-title">$5.400</h2>
+                      <p class="card-text">Mezcla de café con hielo es increíblemente refrescante, perfecta para días soleados.
+                        <ins>Tamaños: </ins></p>
+                      <ul class="list-group-item" *ngFor="let size of sizes">{{size.name}}</ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="../../assets/img/malteada.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><strong>Malteada de café </strong><i>{{mensaje}}</i></h3>
+                      <h2 class="card-title pricing-card-title" [style.color]="color"> $10.000 <small class="text-muted">/-15%</small></h2>
+                      <p class="card-text">El sabor del café en su presentación más suave y fría, que encantará tus sentidos.
+                        <br><ins>Tamaños: </ins></p>
+                      <ul class="list-group-item" *ngFor="let size of sizes2">{{size.name}}</ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab class="tit-tab" label="Otras bebidas">
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col" [hidden]="escondido">
+                  <div class="card">
+                    <img src="../../assets/img/chocolate.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><strong>Chocolate</strong></h3>
+                      <h2 class="card-title pricing-card-title">$6.500</h2>
+                      <p class="card-text">Chocolate con leche vaporizada, completamente exquisito que endulzará cualquier momento del día.
+                        <ins>Tamaños: </ins></p>
+                      <ul class="list-group-item" *ngFor="let size of sizes">{{size.name}}</ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="../../assets/img/matcha.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><strong>Té Matcha</strong> {{getMensaje()}}</h3>
+                      <h2 class="card-title pricing-card-title" [style.color]="color">$3.800 <small class="text-muted">/-50%</small></h2>
+                      <p class="card-text">El sabor natural del matcha, una experiencia pacífica y relajante.
+                        <ins>Tamaños: </ins></p>
+                      <ul class="list-group-item" *ngFor="let size of sizes">{{size.name}}</ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="../../assets/img/infusion.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><strong>Infusión</strong></h3>
+                      <h2 class="card-title pricing-card-title" >$5.000</h2>
+                      <p class="card-text">Los mejores sabores y fragancias herbales acompañados de frutas.
+                        <ins>Tamaños: </ins></p>
+                      <ul class="list-group-item" *ngFor="let size of sizes">{{size.name}}</ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<!--<app-nav></app-nav>
+
+<app-carrusel></app-carrusel>
+<app-card></app-card>
+<app-formulario></app-formulario>
+<app-formulario-evento></app-formulario-evento>
+<app-footer></app-footer>-->
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/nav"><img src="assets/img/logo.svg" width="180" height="40" class="d-inline-block align-top" alt="logo-sara-s_meetting"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" routerLink="/nav">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" routerLink="/card" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Menú
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="/card">Bebidas calientes</a></li>
+                        <li><a class="dropdown-item" routerLink="/card">Bebidas frías</a></li>
+                        <li><a class="dropdown-item" routerLink="/card">Otras bebidas</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/formulario">Reservas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/formulario-evento">Talleres</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="text" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit" style="">Buscar</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <img src="../assets/img/local2.jpg" class="img-fluid" alt="...">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+<footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start">
+    <div class="container">
+        <ul class="bd-footer-links ps-0 mb-3">
+            <li class="d-inline-block"><a href="">Video Blog</a></li>
+            <li class="d-inline-block ms-3"><a href="">Redes</a></li>
+            <li class="d-inline-block ms-3"><a href="/">Locaciones</a></li>
+            <li class="d-inline-block ms-3"><a href="/">Sobre nosotros</a></li>
+        </ul>
+        <p class="mb-0">MU.Diseño y Producción Multimedia - Diseño y Técnologia Web <a href="https://www.unir.net/" target="_blank" rel="license noopener"></a>UNIR</p>
+        <p class="mb-0">@ 2021 Andrea Chitiva, Andrés Agudelo y Julie Orjuela
+    </div>
+</footer>

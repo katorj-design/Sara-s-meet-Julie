@@ -1,0 +1,99 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Reservas</h1>
+      </div>
+      <form>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="exampleInputNombres">Nombres y apellidos</label>
+              <input type="text" class="form-control" id="exampleInputNombres" name="exampleInputNombres" placeholder="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="exampleInputEmail1">{{newReservation.titleEmail}}</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="newReservation.Email">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="exampleInputEmail2">Confirmación Email</label>
+              <input disabled type="text" class="form-control" id="exampleInputEmail2" name="exampleInputEmail2" aria-describedby="emailHelp" [(ngModel)]="newReservation.Email">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="exampleInputTelefono1">{{newReservation.titleTelefono}}</label>
+              <input type="text" class="form-control" id="exampleInputTelefono1" name="exampleInputTelefono1" aria-describedby="telefonoHelp" [(ngModel)]="newReservation.Telefono">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="exampleInputTelefono2"> Confirmación Teléfono</label>
+              <input disabled type="text" class="form-control" id="exampleInputTelefono2" name="exampleInputTelefono2" aria-describedby="telefonoHelp" [(ngModel)]="newReservation.Telefono">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Selecione el día de su reserva</label>
+          <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect1">
+            <option>Lunes</option>
+            <option>Martes</option>
+            <option>Miércoles</option>
+            <option>Jueves</option>
+            <option>Viernes</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Selecione la hora</label>
+          <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect2">
+            <option>9:00 am</option>
+            <option>10:00 am</option>
+            <option>11:00 am</option>
+            <option>12:00 pm</option>
+            <option>13:00 pm</option>
+            <option>14:00 pm</option>
+            <option>15:00 pm</option>
+            <option>16:00 pm</option>
+            <option>17:00 pm</option>
+          </select>
+        </div>
+        <br>
+        <h4>IMPORTANTE:</h4>
+        <p><i>Si tu reserva es mayor a doce (12) personas, debes realizarla vía telefónica al número: 2222111.</i></p>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Notas adicionales</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <p>Por favor lee y acepta las condiciones generales de las reservas:</p>
+        <ul>
+          <li>Recuerda llegar al menos 15 minutos antes de la hora reservada. Si llegas después de dicha hora se cancela la reserva.</li>
+          <li>Tu reserva está sujeta a la disponibilidad de las mesas; enviar este formulario no garantiza que esta sea aceptada. Recuerda que la única forma de que tu reserva quede confirmada es con la emisión de un CÓDIGO DE CONFIRMACIÓN enviado por Sara´s Meeting.</li>
+          <li>Recuerda usar tapabocas y seguir los protocolos de bioseguridad de Sara´s Meeting.</li>
+        </ul>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="">
+            Acepto las condiciones generales de la reserva.
+            <span class="form-check-sign">
+            <span class="check"></span>
+          </span>
+          </label>
+        </div>
+        <button type="button" class="btn btn-dark float-right" (click)= "pulsando($event)" style="">Reservar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
